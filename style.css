@@ -1,0 +1,75 @@
+body{
+    background-color: hsl(275, 100%, 97%);
+}
+
+#banner{
+    position:absolute;
+    z-index:1;
+    width: 100%;
+    left:0;
+    top:0;
+}
+
+#card-wrapper{
+    background-color: white;
+    border-radius: 10px;
+    width:40%;
+    margin: auto;
+    position : relative;
+    z-index:2;
+    top: 180px;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+#title-wrapper{
+    display: flex;
+    align-items: baseline;
+    height:120px; 
+}
+
+h1{
+    color: hsl(292, 42%, 14%);
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size:55px;  
+    margin-left: 20px;
+}
+
+.questionContainer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question{
+    font-size: 16px;
+    font-family: "Work Sans", sans-serif;
+    font-weight:600;
+    color:hsl(292, 42%, 14%);
+    width: 100%;
+}
+
+.answer{
+    font-size: 16px;
+    font-family: "Work Sans", sans-serif;
+    color:hsl(292, 16%, 49%);
+    width: 100%;
+    font-weight: 300;
+}
+
+
+.question:hover{
+    color:#9b35ca;
+    cursor:url("assets/hand-pointer.png"),auto;
+}
+
+.plus-icon:hover{
+    cursor:url("assets/hand-pointer.png"),auto;
+}
+
+.answerContainer{
+    border-bottom: 0.5px solid hsl(275, 100%, 97%);
+}
