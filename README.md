@@ -1,3 +1,6 @@
+Frontend Mentor project #4 - Newbie level 
+HTML / CSS / JS
+
 This challenge is about building a common FAQ accordion and get it looking as clase to the design as possible. 
 The users must be able to : 
 
