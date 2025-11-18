@@ -1,6 +1,9 @@
-      let sections = document.querySelectorAll("section");
+    
+    // GENERATE ANSWERS TO EACH QUESTION 
+    
+    let sections = document.querySelectorAll("section");
 
-      for (let section of sections){
+    for (let section of sections){
         const newContainer = document.createElement("div");
         newContainer.classList.add("answerContainer");
         newContainer.style.display = "none";
@@ -16,14 +19,13 @@
         for (let i=0 ; i < newContentElements.length; i++){
           newContentElements[i].textContent = textsArray[i]; 
         }
-      }
+    }
 
+      // DISPLAY ANSWERS ON CLICK 
 
+    let questionContainers = document.querySelectorAll(".questionContainer");
 
-
-      let questionContainers = document.querySelectorAll(".questionContainer");
-
-      for (let questionContainer of questionContainers){
+    for (let questionContainer of questionContainers){
         questionContainer.addEventListener("click",function(){
           let plusIcon = questionContainer.closest("section").querySelector(".plus-icon");
                  if(plusIcon.src.includes("icon-plus.svg")){
@@ -36,4 +38,21 @@
             answerContainer.style.display = "none";
           }
         })
-      }
+        
+        // DISPLAY ANSWERS WITH KEYBOARD NAVIGATION 
+
+        questionContainer.addEventListener("keypress",function(event){
+            if(event.key==="Enter"){
+                let plusIcon = questionContainer.closest("section").querySelector(".plus-icon");
+                if(plusIcon.src.includes("icon-plus.svg")){
+                    plusIcon.src = "assets/images/icon-minus.svg";
+                    let answerContainer = plusIcon.closest("section").querySelector(".answerContainer");
+                    answerContainer.style.display = "block";
+                }else{
+                    plusIcon.src = "assets/images/icon-plus.svg";
+                    let answerContainer = plusIcon.closest("section").querySelector(".answerContainer");
+                    answerContainer.style.display = "none";
+                }
+            }
+        })
+    }
