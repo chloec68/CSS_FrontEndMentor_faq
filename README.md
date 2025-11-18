@@ -8,3 +8,4 @@ The users must be able to :
     - Navigate the questions and hide/show answers using keyboard navigation alone
     - View the optimal layout for the interface depending on their device's screen size
     - See hover and focus states for all interactive elements on the page
+
